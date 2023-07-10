@@ -1,0 +1,35 @@
+## 가위바위보 
+# import random
+
+# input_list = ['가위', '바위', '보']
+# user_value = input("가위, 바위, 보를 입력하시오: ")
+# com_value = random.choice(input_list)
+# print(f"컴퓨터:{com_value}.")
+
+# if com_value == user_value:
+#     print('비겼습니다')   
+# elif user_value == '바위' and com_value=='가위':
+#     print("컴퓨터가 졌습니다")
+# elif user_value =='보' and com_value=='바위':
+#     print("컴퓨터가 졌습니다")
+# elif user_value =='가위' and com_value=='보':
+#     print("컴퓨터가 졌습니다")    
+
+# else:
+#     print("컴퓨터가 이겼습니다")
+
+
+#로또 번호 생성 함수
+import random
+
+def getlotto():
+    result = []
+    while len(result)<6:
+        n = random.randint(1, 45)
+        if n not in result:
+            result.append(n)
+    return result;
+
+print(f"생성된 로또번호: {getlotto()}")
+
+

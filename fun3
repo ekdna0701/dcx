@@ -1,0 +1,108 @@
+# <<함수 고급>>
+
+# #<튜플>
+# #리스트와 퓨플의 특이한 사용
+# [a, b] = [10, 20]
+# (c, d) = (10, 20)
+
+# print("a:", a)
+# print("b:", b)
+# print("c:", c)
+# print("d:", d)
+
+# #괄호가 없는 튜플
+# tuple_test = 10, 20, 30, 40
+# print("#괄호가 없는 튜플의 값과 자료형 출력")
+# print("tuple_test:", tuple_test)
+# print("type(tuple_test):", type(tuple_test))
+# print()
+
+# a, b, c = 10, 20, 30
+# print("#괄호가 없는 튜플의 활용한 할당")
+# print("a:", a)
+# print("b:", b)
+# print("c:", c)
+
+# #변수의 값을 교환하는 튜플
+# a, b = 10, 20
+
+# print("#교환 전 값")
+# print("a:", a)
+# print("b:", b)
+# print()
+
+# a, b, = b, a
+# print("#교환 후 값")
+# print("a:", a)
+# print("b:", b)
+# print()
+
+# #여러개의 값 리턴하기
+# def test():
+#     return(10, 20)
+
+# a, b = test()
+# print("a:", a)
+# print("b:", b)
+
+# #<람다>
+# #함수의 매개변수로 함수 전달하기
+# def call_10_times(func):
+#     for i in range(10):
+#         func()
+
+# def print_hello():
+#     print("Hello")
+
+# call_10_times(print_hello)
+
+# #map() 함수오 filter()함수
+# def power(item):
+#     return item*item
+# def under_3(item):
+#     return item<3
+
+# list_input_a = [1, 2, 3, 4, 5]
+
+# output_a = map(power, list_input_a)
+# print("#map()함수의 실행 결과")
+# print("map(power, list_input_a):", output_a)
+# print("map(power, list_input_a):", list(output_a))
+# print()
+
+# output_b = filter(under_3, list_input_a)
+# print("#filter()함수의 실행 결과")
+# print("filter(under_3, list_input_a):", output_b)
+# print("filter(under_3, list_input_a)", list(output_b))
+
+# #랜덤하게 1000명의 키와 몸무게 만들기
+# import random
+# hanguls = list("가나다라마바사아자차카타파하")
+# with open("info.txt", "w", encoding='UTF-8') as file:  #한글 깨져서 나오는 걸 막기 위해 encoding 지정 
+#     for i in range(1000):
+#         name = random.choice(hanguls)+random.choice(hanguls)
+#         weight = random.randrange(40, 100)
+#         height = random.randrange(140, 200)
+
+#         file.write("{}, {}, {}\n".format(name, weight, height))
+
+# with open("info.txt", "r") as file:
+#     for line in file:
+#         (name, weight, height) = line.strip().split(",")
+
+#         if (not name) or (not weight) or (not height):
+#             continue
+#         bmi = int(weight)/((int(height)/100)**2)
+#         result=""
+#         if 25<= bmi:
+#             result = "overweight"
+#         elif 18.5 <= bmi:
+#             result = "normal weight"
+#         else:
+#             result = "under weight"
+        
+#         print('\n'.join(["name:{}", "weight:{}", "heightL{}", "BMI:{}", "result:{}"]).format(name, weight, height, bmi, result))
+#         print()
+
+
+#제너레이터

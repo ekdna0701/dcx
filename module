@@ -1,0 +1,69 @@
+# #랜덤 모듈
+# import random
+# print("# ramdon module")
+
+# print("-rabdin():", random.random())
+
+# print('-uniform(10, 20):', random.uniform(10, 20))
+
+# print("-randrange(10):", random.randrange(10))
+
+# print("-choice([1, 2, 3, 4, 5]):", random.choice([1, 2, 3, 4, 5]))
+
+# print("-shuffle([1, 2, 3, 4, 5]):", random.shuffle([1, 2, 3, 4, 5]))
+
+# print("-sample([1, 2, 3, 4, 5], k=2):", random.sample([1, 2, 3, 4, 5,], k=2))
+
+# #sys module
+# import sys
+
+# print(sys.argv)
+# print("--")
+
+# print("getwindowsversion:()", sys.getwindowsversion())
+# print("---")
+# print("copyright:", sys.copyright)
+# print("---")
+# print("version:", sys.version)
+
+# sys.exit()
+
+#os module
+# import os
+# print(" 현재 운영체제:", os.name)
+# print("현재 폴더:", os.getcwd())
+# print("현재 폴더 내부 요소:", os.listdir())
+
+# os.mkdir("hello")
+# os.rmdir("hello")
+
+# with open("original.txt", 'w') as file:
+#     file.write("hello")
+# os.rename("original.txt", "new.txt")
+
+# os.remove("new.txt")
+# os.unlink("new.txt")
+
+# os.system("dir")
+
+# #time module
+# import time
+# print("지금부터 5초 동안 정지합니다")
+# time.sleep(5)
+# print("프로그램을 종료합니다.")
+
+# #urllib module
+# from urllib import request
+
+# target = request.urlopen("https://google.com")
+# output = target.read()
+
+# print(output)
+
+#Speach to Text
+fro gtts import gTTS
+from playsound import playsound
+
+s=gTTS("Hello. Nice to meet you")
+s.save('hello1.mp3')
+playsound('hello1.mp3')
